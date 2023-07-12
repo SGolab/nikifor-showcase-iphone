@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import {useThree} from "@react-three/fiber";
 
 export function Model3(props) {
-    const { nodes, materials } = useGLTF('/scene.gltf')
+    const { nodes, materials } = useGLTF('./model.gltf')
 
 
     let camera = useThree(state => state.camera);
@@ -54,4 +54,4 @@ export function Model3(props) {
     )
 }
 
-useGLTF.preload('/scene.gltf')
+useGLTF.preload('./model.gltf')

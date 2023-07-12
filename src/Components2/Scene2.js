@@ -12,14 +12,14 @@ import { useThree } from "@react-three/fiber";
 
 export default function Model2({ ...props }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/scene.gltf");
+  const { nodes, materials } = useGLTF("./model.gltf");
 
   let camera = useThree((state) => state.camera);
 
   useLayoutEffect(() => {
     camera.position.set(-0.1,0.4,5);
     materials.Body.color.set("#9BB5CE");
-        
+
   }, []);
 
   return (
@@ -150,4 +150,4 @@ export default function Model2({ ...props }) {
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("./model.gltf");

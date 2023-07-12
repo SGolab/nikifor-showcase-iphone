@@ -12,23 +12,23 @@ import {ColorContextProvider} from "./context/ColorContext";
 import CameraSection from "./sections/CameraSection";
 
 function App() {
-  return (
-    <>
-      <GlobalStyle/>
-        <Quote/>
-        <PhoneModel/>
-        <HeroSection/>
-        <DesignSection/>
-        <DisplaySection/>
-        <ProcessorSection/>
-        <BatterySection/>
-        <ColorContextProvider>
-        <ColorSection/>
-          <CameraSection />
-        <PricingSection/>
-        </ColorContextProvider>
-    </>
-  );
+    return (
+        <>
+            <GlobalStyle/>
+            <Quote/>
+            <PhoneModel/>
+            <HeroSection/>
+            <DesignSection/>
+            <DisplaySection/>
+            <ProcessorSection/>
+            <BatterySection/>
+            <ColorContextProvider>
+                <ColorSection/>
+                <CameraSection/>
+                <PricingSection/>
+            </ColorContextProvider>
+        </>
+    );
 }
 
 export default App;

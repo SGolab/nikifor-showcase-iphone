@@ -12,7 +12,7 @@ import { useThree } from "@react-three/fiber";
 
 export default function Model3({ ...props }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/scene.gltf");
+  const { nodes, materials } = useGLTF("./model.gltf");
 
   let camera = useThree((state) => state.camera);
 
@@ -24,7 +24,7 @@ export default function Model3({ ...props }) {
       camera.fov = 18;
       camera.updateProjectionMatrix();
     }
-        
+
   }, []);
 
   return (
@@ -155,4 +155,4 @@ export default function Model3({ ...props }) {
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("./model.gltf");

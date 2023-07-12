@@ -13,7 +13,7 @@ import { useThree } from "@react-three/fiber";
 
 export default function Model({ ...props }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/scene.gltf");
+  const { nodes, materials } = useGLTF("./model.gltf");
 
   let camera = useThree((state) => state.camera);
   let scene = useThree((state) => state.scene);
@@ -32,13 +32,13 @@ export default function Model({ ...props }) {
 
 
     let mm = gsap.matchMedia();
-  
+
 mm.add({
 
   // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.
   isDesktop: `(min-width: 48em)`,
   isMobile: `(max-width:48em`,
-  
+
 
 }, (context) => {
 
@@ -72,13 +72,13 @@ mm.add({
     camera.updateProjectionMatrix();
         }
 
-  return () => { 
+  return () => {
     if(t1) t1.kill();
   }
-}); 
+});
 
-      
-        
+
+
   }, []);
 
   return (
@@ -209,4 +209,4 @@ mm.add({
   );
 }
 
-useGLTF.preload("/scene.gltf");
+useGLTF.preload("./model.gltf");
